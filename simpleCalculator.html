@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Simple Calculator" icon-name="standard:number_input">
+        <div class="slds-var-p-around_small">
+            <lightning-input name="number1" type="number"  value={num1} label="Enter first Number" onchange={changeHandler1} required ></lightning-input>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-input name="number2" type="number" value={num2}  label="Enter Second Number" onchange={changeHandler2} required  ></lightning-input>
+        </div>
+        
+        <div class="slds-var-p-around_small ">
+        <lightning-input read-only="true" name="result" value={result} label="Result"> </lightning-input>
+        </div>
+        <div class="slds-button-group slds-var-p-around_small" role="group">
+            <button class="slds-button  slds-button_brand"  name="sum" onclick={handleClick}> Sum</button>
+            <button class="slds-button  slds-button_outline-brand" name="minus" onclick={handleClick}>Subtract</button>
+            <button class="slds-button  slds-button_brand" name="multiply" onclick={handleClick}>Multiply</button>
+            <button class="slds-button  slds-button_outline-brand" name="divide" onclick={handleClick}>Divide</button>
+            <button class="slds-button slds-button_destructive" name="clear" onclick={clearHandler} >Clear</button>
+        </div>
+</lightning-card>
+</template>
